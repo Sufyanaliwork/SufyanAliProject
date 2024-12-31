@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple PM App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Management App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Project Management App</h1>
-    
-    <!-- Task Form -->
-    <div class="task-form">
-      <input type="text" id="task-name" placeholder="Task Name" />
-      <textarea id="task-desc" placeholder="Task Description"></textarea>
-      <input type="date" id="task-due" />
-      <select id="task-priority">
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-      </select>
-      <button id="add-task-btn">Add Task</button>
-    </div>
-    
-    <!-- Task List -->
-    <ul id="task-list"></ul>
-  </div>
+    <div class="container">
+        <header>
+            <h1>Project Management Dashboard</h1>
+            <p>Stay organized with your projects and tasks</p>
+        </header>
 
-  <script src="app.js"></script>
+        <section id="task-form">
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Task Name" required>
+                <input type="date" id="dueDate" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section id="task-list">
+            <h2>Your Tasks</h2>
+            <ul id="tasks"></ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Project Management Tool</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
